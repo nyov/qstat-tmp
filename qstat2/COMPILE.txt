@@ -1,0 +1,63 @@
+Compilation instructions for QStat
+----------------------------------
+
+Windows users can find a pre-built binary in the win32/ directory
+of the QStat zip file.  If you need to compile a new Windows binary,
+run (requires an Microsoft C/C++ compiler):
+
+nmake windows
+
+All other platforms and OSs, keep reading:
+I've simplified the compilation process for qstat.  Assuming you
+have some sort of make utility and a C compiler, you can run the
+following in a shell or command window to compile qstat:
+
+make <operating system>
+
+
+Instructions for VMS can be found at the end of this file.
+
+The supported operating systems are in the Makefile:
+
+solaris		Sun Solaris 2.4, 2.5, 2.6
+sgi irix	SGI Irix 5.3, 6.4
+freebsd		FreeBSD
+openbsd		OpenBSD
+linux		Linux
+windows		Windows 95/NT using Microsoft compiler
+os2		OS/2 Warp using IBM Visual Age compiler
+os2emx		OS/2 Warp using EMX compiler
+hp		HP-UX 10.20 and 11.0 using their ANSI C compiler
+aix		AIX 4.2
+
+If your system uses GNU cc, edit the Makefile appropriately, or run
+
+make CC=gcc <operating system>
+
+If it doesn't compile for you, try tweaking the library settings
+in the Makefile.  If your version of Unix is not listed, try freebsd.
+On most Unixes, this should be enough to compile qstat:
+
+cc -o qstat qstat.c hcache.c template.c
+
+As a last resort, send me email and I'll try to help.
+steve@qstat.org
+
+
+Instructions for VMS
+--------------------
+VMS patches by John Ross Hunt (bigboote@ais.net) Tested with DEC C
+V5.6-003 on OpenVMS Alpha V7.1
+
+It was tested with DEC C V5.6-003 on OpenVMS Alpha V7.1.  It should
+work on OpenVMS Alpha V7.0.  OpenVMS V6.2 and below doesn't support
+"h_errno" so you will have to comment out the affected chunks of code.
+I have no idea if will work on OpenVMS VAX.
+
+$ cc/prefix=all/standard=vaxc qstat
+$ link qstat
+$ qstat :== $'f$environ("default")'qstat.exe
+$ qstat "-P" "-qws" 38.241.43.118:27910
+
+Note: Use quotes to preserve case in the command line switches.
+
