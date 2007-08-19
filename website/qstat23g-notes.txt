@@ -1,0 +1,61 @@
+QStat version 2.3g
+Feb 18, 2000
+
+
+BETA is done!  The 2.3 release is stable enough now to drop the
+beta qualifier.
+
+Summary of New Features
+-----------------------
+Added options to support Soldier of Fortune [-sfs]
+
+New template variables
+----------------------
+$IF:SOLDIEROFFORTUNE
+
+There are command-line options to control the following, but it's
+handy to have control within the templates as well.
+$COLORNUMBERS		Set the format of $SHIRTCOLOR and $PANTSCOLOR
+$COLORNAMES
+$COLORRGB
+$TIMESECONDS		Set the format of $CONNECTTIME
+$TIMECLOCK
+$TIMESTOPWATCH
+
+Summary of Fixes
+----------------
+Fix crashes in Unreal -raw player output (duh).
+Fix hangs doing Unreal server queries.
+Fix $GAME for Quake 3 servers
+Fix Kingpin servers reported as Q2 servers
+
+Notes
+-----
+The SOF server does not return map information, so you'll just get a
+'?' or blank for an SOF map.  The map info is returned by the master
+server.  But QStat does not yet support the SOF master server.  I
+traced the SOF master protocol, but it's totally different from any
+other master server.  Before I invest the time into writing a
+parser for the SOF master packets, I'm going to wait to see if it
+changes before the final retail release.
+
+Notes on Future Releases
+------------------------
+Now that the 2.3 release train is winding down, what's up for
+QStat 2.4?  I don't know, but there's a few frequently requested
+features:
+ - More sort options; server and player
+ - More games; Delta Force, Descent III
+ - Fetch server lists from web pages
+ - Better templates; variables and full expression evaluation
+ - Better performance on large server lists
+ - Examples and samples
+
+I don't know which features will be available when, so don't ask.
+
+There may be one or two more 2.3 releases to fix critical bugs or
+add a new game.
+
+Getränk und ist fröhlich,
+
+Steve

@@ -1,0 +1,110 @@
+QStat version 2.5b
+** UPDATED for 2.5b **
+August 8, 2002
+
+Whoops, I broke XQF.  When using QStat raw mode, XQF and other programs
+rely on the number of fields returned staying fixed.  I added a game/mod
+field to most raw output which breaks these programs.
+
+Summary of New Features
+-----------------------
+Extended -raw with a -raw,game variation that adds the game/mod name to
+        the end of the raw server output.  Otherwise, the game/mod info
+        is not output in raw mode.
+
+Thanks to Ludwig Nussel for not biting my head off (too much).
+
+Steve, steve@qstat.org
+
+
+QStat version 2.5a
+August 6, 2002
+
+Final version of QStat 2.5a.  Please send feedback and bug reports
+to qstat-users@yahoogroups.com or to steve@qstat.org
+
+This version of QStat is being distributed under the Artistic License.
+The terms of the license can be found in LICENSE.txt in the QStat package.
+
+Summary of New Features
+-----------------------
+Config file support to define new game types
+	This is a major new feature.  This will allow users to define
+	new game types and master servers, including setting custom
+	request packets.  I expect that support for most new game types
+	will be accomplished via config files.
+	The default config file is "qstat.cfg".  More game types from
+	QStat users can be found in "contrib.cfg".
+Added support for "status port offset" to config file; UNS (unreal) has
+	this set to 1.  If you extend UNS, the new server type will have
+	the same status port offset.
+Added a GNUmakefile to support gmake
+	Updated COMPILE.txt with new instructions
+Improve Half-Life server status; extracts mod information and
+	secure status
+Add support for server rules template (-Tr file)
+	See qstatdoc.html for instructions.
+Support broadcast queries for Tribes and Tribes 2
+Star Trek: Elite Force server and master (-efs and -efm)
+Return to Castle Wolfenstein server and master (-rws and -rwm)
+Debug flag (-d)  (uses an improved packet output format)
+Support color player names in Soldier of Fortune
+
+Default Config File (qstat.cfg)
+-------------------------------
+Command and Conquer: Renegade server (-crs)
+Soldier of Fortune 2 (-sof2s)
+Soldier of Fortune 2 Master (-sof2m)
+Medal of Honor: Allied Assault server (-mas)
+Medal of Honor: Allied Assault server, Quake 3 protocol (-maqs)
+Half-Life "infostring" protocol (-hlqs)
+	This is a Quake 2 style protocol
+
+Fixes
+-----
+Fixed raw output to include the game or mod name as the last item
+Fix template to allow numbers, '.' and ' ' in rule names
+	Refers to $(RULE:someserverrule)  Allowing space ' ' may
+	break existing templates if they use syntax like
+		$RULE:maxbullets Max Bullets
+	This can be fixed by change it to $(RULE:maxbullets)
+	This change was made because SOF2 allows spaces in server rule
+	names.
+Fix Unreal and Gamespy based servers to support backslashes '\' in
+	player names (only partially worked before)
+Support Half-Life split packets; this happens to the rules info from
+	some Half-Life servers (usually AdminMod and DOD).
+XML output; added <?xml ...> element, UTF-8 output option (-utf8)
+XML; added <gametype>
+Fix crash on broadcast queries
+Avoid duplicates in the rule list
+Fixed -srcip to put address in the right byte-order
+Work-around for crash on Windows when bind() returns temporary error
+Finish output when -timeout expires
+Changed Q3 based servers to use a two-packet status query; I think
+	this gets more accurate mod information.
+More accurate player count on Quake based servers
+Compiles on OSX/Darwin
+Fix one byte overrun on QuakeWorld packet
+
+New template variables
+----------------------
+$TYPEPREFIX		The server's game type prefix
+$RULENAMESPACES		Allow spaces in rule names
+$RULETEMPLATE		Invoke the server rule template
+$RULENAME		The rule name
+$RULEVALUE		The rule value
+$(IF:RULENAME(name))	True if rule name equals "name"
+$(IF:RULEVALUE(value))	True if rule value equals "value"
+(see qstat.cfg for gametype variables)
+
+Thanks
+------
+Many thanks to all the beta testers for bug reports and feature
+suggestions.  There are many to list, but the following provided
+significant help:
+Kingsley Foreman, Mike Davis, Ludwig Nussel, Pierre Smolarek,
+aphax, and Simon Garner.   and I'm sure I forgot someone
+
+
+Steve, steve@qstat.org

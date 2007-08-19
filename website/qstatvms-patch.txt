@@ -1,0 +1,31 @@
+--- qstat.c	Fri Feb  6 09:39:24 1998
++++ qstat.c.vms	Fri Feb  6 10:25:24 1998
+@@ -5,6 +5,7 @@
+  * http://www.activesw.com/people/steve/qstat.html
+  *
+  * Thanks to Per Hammer for the OS/2 patches (per@mindbend.demon.co.uk)
++ * Thanks(?) to John Ross Hunt for the OpenVMS Alpha patches (bigboote@ais.net)
+  *
+  * Inspired by QuakePing by Len Norton
+  *
+@@ -29,6 +30,10 @@
+ #include <string.h>
+ #include <ctype.h>
+ 
++#ifdef VMS
++#define _ISUNIX
++#endif
++
+ #ifdef unix
+ #define _ISUNIX
+ #endif
+@@ -39,7 +44,9 @@
+ #ifdef _ISUNIX
+ #include <unistd.h>
+ #include <sys/socket.h>
++#ifndef VMS
+ #include <sys/param.h>
++#endif
+ #include <sys/time.h>
+ #include <netinet/in.h>
+ #include <netdb.h>

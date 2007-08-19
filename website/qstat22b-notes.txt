@@ -1,0 +1,14 @@
+QStat version 2.2b
+Jan 15, 1999
+
+D'oh!  I need to do more testing.  The -raw mode did not work at
+all for Half-Life.  Thanks to Dark Grue <darkgrue@iname.com> for
+bring that to my attention.
+
+Bug Fixes
+---------
+Fix Half-Life support with -raw mode
+Shush compiler warning on Linux
+
+
+Steve, steve@activesw.com

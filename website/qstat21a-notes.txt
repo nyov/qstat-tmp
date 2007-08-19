@@ -1,0 +1,62 @@
+QStat Version 2.1a
+Oct 4, 1998
+
+This release supercedes previous 2.1 releases (2.1z BETA and 2.1y BETA)
+
+    [ This text can also be found in CHANGES.txt in the release. ]
+
+Summary of New Features
+-----------------------
+Unreal 2.15+ support			(option -uns)
+Broadcast queries			(prefix address with '+')
+Save lists from master servers		(options -qw,outfile and -q2m,outfile)
+
+Bug Fixes
+---------
+Fixed host cache on Intel platforms
+Report Host Not Found as a server error (so it appears in templates
+	and raw output)
+
+New variables for output templates
+----------------------------------
+Server template variables
+$HOSTNOTFOUND	True if the host name lookup failed
+
+Player template variables
+$MESH		Player mesh (model) name (Unreal only)
+
+Notes
+-----
+QStat will support the public Unreal master server once it's done.  The
+current Unreal master server is private to GameSpy (snarl).
+
+The broadcast queries is an experimental feature.  I've only
+tested it with Quake II.  Other games will be tested and
+supported in later releases.  For example, querying the local net for
+Q2 servers on the default port:
+	qstat -q2s +255.255.255.255
+The '+' makes QStat broadcast to the given address.  The default
+broadcast address for all nets is 255.255.255.255.  You can also use a
+network specific broadcast (eg. 199.2.18.255).  On Unixes, 'ifconfig
+-a' will display the broadcast address for all attached networks.
+
+The ",outfile" option for master servers is handy for dealing with
+unreliable master server (such as the id Q2 master).  Run qstat
+once to save the servers lists to files, and a second time to
+query the servers:
+	qstat -q2m,outfile satan.idsoftware.com,idq2.lst
+	qstat -f idq2.lst
+The first command saves the server list from the id Q2 master into
+"idq2.lst".  If the master isn't working, then the file retains its
+previous contents.  The second command queries the servers in that
+file.
+
+I've also included the templates for an example Unreal server list web
+page.
+
+Thanks to my wonderful users for reporting bugs and making
+suggestions.  And a special thanks to the Unreal development team for
+actually documenting their query protocol (unlike some other well known
+first person shooter developers).
+
+Steve, steve@activesw.com

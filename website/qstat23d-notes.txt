@@ -1,0 +1,49 @@
+QStat version 2.3d BETA
+May 12, 1999
+
+More bug reports and suggestions prompted this release.
+
+Download from:
+
+http://www.activesw.com/people/steve/qstatdl.html
+
+
+
+Quake 3 master
+--------------
+The id Q3 master server isn't working very well.  The protocol is lame
+and its network is way over subscribed.  I've enhanced QStat to deal
+with the changes, but I actually think they (id) have made matters worse
+rather than better.  QStat can now, sometimes, get all the servers
+from the master, but it often can't get 30-60% of the servers.  This
+is not QStat problem, but id's.  I've sent them a detailed analysis
+of the problems and made some suggestions.
+
+Summary of Fixes
+----------------
+Improve reliability of Q3 master server queries
+Support Tribes servers with 3+ teams
+Strip escape sequences from Q3 player names; use -hpn if you want the
+	complete content of player names.
+Accurately calculate number of servers on a master (ignore duplicates).
+Fixed $(ISFULL) to be false if the server is empty [duh]
+
+New Features
+------------
+New option to control master server retry interval ("-mi") independent
+	of server retry interval.
+Increase maximum -maxsim to 256 for Win32.
+Added $(TYPESTRING) template var; shows server's type string (eg. q2s, hls)
+Added $(NOWINT) template var; shows the current time in seconds since
+	00:00:00 UTC, January 1, 1970.
+
+
+Notes
+-----
+Many many thanks to Nico de Vries (Nico.de.Vries@ucc.nl) of CLQ for
+the many bugs reports, suggestions, etc.  Thanks to stincey@nireland.com
+for figuring out the Tribes 3+ teams bug.
+
+
+Steve, steve@activesw.com
+

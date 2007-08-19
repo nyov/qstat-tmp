@@ -1,0 +1,30 @@
+QStat version 2.3f BETA
+Jan 11, 2000
+
+Fix to support version 405 Unreal servers
+
+Download from:
+
+http://www.activesw.com/people/steve/qstatdl.html
+
+
+Summary of Fixes
+----------------
+Added player ping and face to Unreal -raw output
+Fix queries for version 405 Unreal servers
+
+New template variable
+---------------------
+For the player template:
+$FACE       The texture used on a player's face.
+            This was added to Unreal a while back, but I didn't notice.
+
+Notes
+-----
+The fine blokes at Unreal decided to fiddle with the Unreal query
+protocol.  When asked why PingTool and QStat did not work with the
+new servers, they responded that we must not be following the new
+GameSpy spec.  Ha!  As if they publish this information or care to
+keep other server browser authors informed.  Sheesh.
+
+Steve
