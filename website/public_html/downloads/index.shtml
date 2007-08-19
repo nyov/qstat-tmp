@@ -28,7 +28,7 @@ terminate lines.</p>
   <p>SVN version currently includes (as of August 19th 2007)<br />
 - Bug Fixes<br />
 - ETQW support</p>
-<p>You can <a href="http://qstat.svn.sourceforge.net/viewvc/qstat/trunk/qstat2/">browse the latest source</a> and change comments. Or If you wish to download and compile the latest SVN trunk via the following checkout command:</p>
+<p>You can <a href="http://qstat.svn.sourceforge.net/viewvc/qstat/trunk/qstat2/">browse the latest source</a> to view change comments. Or If you wish to download and compile the latest SVN trunk, then you may do so anonymously via the following checkout command:</p>
 <pre>https://qstat.svn.sourceforge.net/svnroot/qstat/trunk/qstat2 qstat2</pre>
 </div>
 
