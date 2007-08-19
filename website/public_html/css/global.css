@@ -66,7 +66,9 @@ pre {
 	font-size: 10px;
 }
 
-
+a img {
+	border: 0;
+}
 
 a:link {
 	color: #F9BA53;
