@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="container">
+<div class="leftblock">
+  <p><img src="images/logo1.png" alt="QSTAT" width="120" height="135" class="qstatlogo" />
+  <a href="#" class="latestdownload">DOWNLOAD QSTAT 2.10</a>
+  <ul id="nav1">
+    <li><a href="123">Release Notes v2.6</a></li>
+    <li><a href="#">Documentation v2.6</a></li>
+	<li class="spacer"></li>
+    <li><a href="#">Mailing Lists</a> </li>
+	<li class="spacer"></li>
+    <li><a href="#">Information</a></li>
+    <li><a href="#">FAQ</a></li>
+    <li><a href="#">Server Pages</a></li>
+    <li><a href="#">CGI Scripts</a></li>
+    <li><a href="#">Derived Works</a></li>
+    <li><a href="#">Network Protocol</a></li>
+	<li class="spacer"></li>
+    <li><a href="#">Contact Steve</a></li>
+  </ul>
+  <p><br />
+  </p>
+</div>
+<div class="rightblock">
+  <h1 align="right">QStat Mailing Lists</h1>
+  <h3>QStat Announcements</h3>
+  Announcements of new QStat releases. <strong>The group   will not be used for any other email.</strong><br />
+  <dl>
+    <dt>
+      <dt>Message Archive<dd><a href="http://groups.yahoo.com/group/qstat-announce">http://groups.yahoo.com/group/qstat-announce</a></dd><dt>Subscribe </dt>
+    <dd><a href="mailto:qstat-announce-subscribe@yahoogroups.com">qstat-announce-subscribe@yahoogroups.com</a></dd>
+    <dt>Unsubscribe </dt>
+    <dd><a href="mailto:qstat-announce-unsubscribe@yahoogroups.com">qstat-announce-unsubscribe@yahoogroups.com</a></dd>
+  </dl>
+  <h3>QStat Users</h3>
+  Discussion among QStat users about features, usage, and   techniques. I imagine topics will include CGI, Perl, output templates, cron,   PHP, ASP, and other web server integration issues.
+  <dl>
+    <dt>Message Archive</dt>
+    <dd><a href="http://groups.yahoo.com/group/qstat-users">http://groups.yahoo.com/group/qstat-users</a></dd>
+    <dt>Subscribe </dt>
+    <dd><a href="mailto:qstat-users-subscribe@yahoogroups.com">qstat-users-subscribe@yahoogroups.com</a></dd>
+    <dt>Unsubscribe </dt>
+    <dd><a href="mailto:qstat-users-unsubscribe@yahoogroups.com">qstat-users-unsubscribe@yahoogroups.com</a></dd>
+    <dt>Mail to Group </dt>
+    <dd><a href="mailto:qstat-users@yahoogroups.com">qstat-users@yahoogroups.com</a> </dd>
+  </dl>
+  </div>
+<p>&nbsp;</p>
+<div class="clear"></div>
+</div>
+</body>
+</html>
