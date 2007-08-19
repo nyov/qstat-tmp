@@ -70,8 +70,13 @@ a img {
 	border: 0;
 }
 
-a:link {
+a:link, a:visited {
 	color: #F9BA53;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 ul#nav1 {
