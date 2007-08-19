@@ -12,8 +12,8 @@
 <!--#include virtual="/inc/nav.html" -->
 </div>
 <div class="rightblock">
-  <p class="quote">&ldquo;QStat is a command-line program that gathers real-time statistics from Internet game servers. Most supported games are of the first person shooter variety (Quake, Half-Life, etc)&rdquo; <br />
-    - Steve Jankowski, Author</p>
+  <p class="quote">&ldquo;QStat is a command-line program, written in C, that gathers real-time statistics from Internet game servers. Most supported games are of the first person shooter variety (Half-Life, Quake, Battlefield etc)&rdquo; <br /><br />
+    - Steve Jankowski, Initial Author</p>
   <h3>Feature Summary</h3><ul>
     <li>Supports Windows 32bit, Linux, and most Unixes </li>
     <li>Comes with C source code and a binary for Windows </li>
