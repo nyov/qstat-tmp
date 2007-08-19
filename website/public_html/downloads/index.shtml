@@ -12,36 +12,28 @@
 <!--#include virtual="/inc/nav.html" -->
 </div>
 <div class="rightblock">
-  <h1 align="right">QStat Mailing Lists</h1>
-  <h3>QStat Downloads</h3>
+  <h1 align="right">QStat Downloads</h1>
   <p>The Unix download contains source only.  The Windows download includes
 a pre-compiled Windows binary in addition to the source code.  Otherwise
 the files are the same in the two archives
 except that the text files in the Windows version *should* be using &lt;cr&gt;&lt;lf&gt; to
 terminate lines.</p>
-  <dl>
-    <dt>
-      <dt>Message Archive<dd><a href="http://groups.yahoo.com/group/qstat-announce">http://groups.yahoo.com/group/qstat-announce</a></dd><dt>Subscribe </dt>
-    <dd><a href="mailto:qstat-announce-subscribe@yahoogroups.com">qstat-announce-subscribe@yahoogroups.com</a></dd>
-    <dt>Unsubscribe </dt>
-    <dd><a href="mailto:qstat-announce-unsubscribe@yahoogroups.com">qstat-announce-unsubscribe@yahoogroups.com</a></dd>
-  </dl>
-  <h3>QStat Users</h3>
-  <p>Discussion among QStat users about features, usage, and   techniques. I imagine topics will include CGI, Perl, output templates, cron,   PHP, ASP, and other web server integration issues.</p>
-  
-  <dl>
-    <dt>Message Archive</dt>
-    <dd><a href="http://groups.yahoo.com/group/qstat-users">http://groups.yahoo.com/group/qstat-users</a></dd>
-    <dt>Subscribe </dt>
-    <dd><a href="mailto:qstat-users-subscribe@yahoogroups.com">qstat-users-subscribe@yahoogroups.com</a></dd>
-    <dt>Unsubscribe </dt>
-    <dd><a href="mailto:qstat-users-unsubscribe@yahoogroups.com">qstat-users-unsubscribe@yahoogroups.com</a></dd>
-    <dt>Mail to Group </dt>
-    <dd><a href="mailto:qstat-users@yahoogroups.com">qstat-users@yahoogroups.com</a> </dd>
-  </dl>
-  </div>
-<p>&nbsp;</p>
+    <h3>Production Release (Tested and Stable) - November 4, 2006</h3>
+    <ul>
+    <li><a href="http://downloads.sourceforge.net/qstat/qstat-2.11.tar.gz?modtime=1162659059&amp;big_mirror=0">QStat 2.11 for *nix/Source Code</a>  (~252Kb) - gzipped tar file</li>
+    <li><a href="http://downloads.sourceforge.net/qstat/qstat-2.11-win32.zip?modtime=1162840783&amp;big_mirror=0">QStat 2.11 for Windows Compiled 32bit</a> (~199Kb) - zip file</li>
+    </ul>
+  <h3>Development Release (SVN)</h3>
+  <p><a href="http://sourceforge.net/projects/qstat/">SourceForge Project Page</a> - Please note that this version, although supporting newer game protocals, may be unstable.</p>
+  <p>SVN version currently includes (as of August 19th 2007)<br />
+- Bug Fixes<br />
+- ETQW support</p>
+<p>You can <a href="http://qstat.svn.sourceforge.net/viewvc/qstat/trunk/qstat2/">browse the latest source</a> and change comments. Or If you wish to download and compile the latest SVN trunk via the following checkout command:</p>
+<pre>https://qstat.svn.sourceforge.net/svnroot/qstat/trunk/qstat2 qstat2</pre>
+</div>
+
 <div class="clear"></div>
+
 </div>
 </body>
 </html>
