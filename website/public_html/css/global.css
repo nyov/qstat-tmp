@@ -110,3 +110,10 @@ ul#nav1 a:hover {
 .clear {
 	clear:both;
 }
+pre {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 11px;
+	background-color: #000000;
+	padding: 5px;
+	border: 1px solid #EBBA49;
+}
