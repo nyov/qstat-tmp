@@ -1,0 +1,36 @@
+QStat version 2.3c BETA
+May 3, 1999
+
+A slew of bug reports arrived over the weekend.  I guess QStat users
+are weekend warriors.  Thanks to the four people that sent patches for
+the Q3 master breakage.  I won't say who's patch I used, but I
+selected the most elegant.
+
+id has said that the Q3 master protocol will be changing alot over
+the next weeks.  I'll try to track their progress, but no promises.
+They also asked for suggestions on reducing packet size, so I sent
+them my ideas (all quite clever <puff> <puff>).
+
+Summary of Fixes
+----------------
+Q3 master server
+Q3 server name
+Tribes -raw mode [forgot to write it]
+Removed leftover debug print
+Switched snprintf() to sprintf() [much more portable]
+Half-Life game rules [useful for TFC]
+Fixed -progress output
+Added player ping to Unreal player output
+Fixed minor mistakes in docs
+
+Notes
+-----
+Many thanks to:
+"Dark Grue" <darkgrue@iname.com> of QStatList
+Nico de Vries <Nico.de.Vries@ucc.nl> of CLQ
+"Joe S." <jszabo@eden.rutgers.edu> of ... I forget what Joe does
+Sven Grundmann <grundema@uni-duesseldorf.de>
+
+for their bug reports, patches, and suggestions.
+
+Steve, steve@activesw.com

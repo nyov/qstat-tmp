@@ -1,0 +1,50 @@
+QStat version 2.4c
+Apr 20, 2001
+
+	Download from http://www.qstat.org
+
+Summary of New Features
+-----------------------
+Tribes 2 player type and tribe tag information
+Changed Quake 3 default version to "48" (1.27g)
+New Tribes 2 master filters. (see documentation)
+
+Bug Fixes
+---------
+Fixed win32/qstat.exe binary; re-compiled using old compiler
+Convert newlines into spaces when printing Tribes 2 server info
+    in raw mode.
+Fixed problems with the 22337 build of Tribes 2.
+Tribes 2 raw output is now the same format as most other servers.
+    Note that this reverses the order of current and max players
+    from what they were in 2.4b.  And adds ping and # retries values.
+
+New template variables
+----------------------
+$IF:ISBOT
+$IF:ISALIAS
+$IF:TRIBETAG
+$TRIBETAG
+
+Notes
+-----
+	[ Blarg, I hate it when I blow a release.  Many people had
+	  problems with the win32/qstat.exe in 2.4b release.  I had
+	  compiled this with a new compiler version on a new Win2k
+	  install.  It worked fine for me, but apparently the new
+	  compiler has compatibility problems.  So, I've gone back
+	  to the old compiler and old NT 4.0 install.
+	  Several people also reported problems using 2.4b with the
+	  new 22337 build of Tribes 2.
+	  Sorry about the problems.  This release should fix things
+	  up. ]
+
+The new Tribes 2 player info is available in raw mode (see docs) and
+templates.  But it is not displayed in the interactive output.  I've
+updated the sample Tribes 2 templates to display the new player info.
+
+Finally, there seem to be a number of bugs with the Tribes 2 master
+servers.  One of the bugs is noted in the documentation.  Dynamix is
+aware of the problems and working to fix them.
+
+Steve, steve@qstat.org

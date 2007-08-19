@@ -1,0 +1,68 @@
+QStat Version 2.1y BETA
+Aug 22, 1998
+
+[ This text can also be found in CHANGES.txt in the release. ]
+
+
+Summary of New Features
+-----------------------
+HexenWorld support
+Revived support for id's Q2 master
+New variables for output templates
+Faster host cache initialization
+More efficient server query (Unix only)
+Support for AIX 4.2 and HPUX 11.0
+
+
+Bug Fixes
+---------
+Fixed bogus query failure on second server on same IP address.
+Fixed to ignore QW and Q2 server packets that contain lots of error
+	messages.  Also disabled printing of the "Odd packet" messages.
+	They can be enabled with the -errors option.
+Fixed output templates on Windows
+
+Non-feature
+-----------
+Unreal support.  Unreal needs to get fixed before QStat can support it.
+
+
+HexenWorld support
+------------------
+Use the -hws command line option, or the HWS server type key.
+
+Revived support for id's Q2 master
+----------------------------------
+id's Quake II master server was broken for a long time.  QStat
+supported id's Q2 master, but the master only rarely returned anything
+(and you had to wait up to 30 seconds for a response).  When QuakeSpy
+announced that id had fixed their Q2 master, I was surprised that QStat
+did not work on the fixed master.  Turns out the "fix" also changed the
+query protocol slightly.
+
+New variables for output templates
+----------------------------------
+General variables
+$\		Inhibit output of the next newline.
+
+Server template variables
+$HEXENWORLD	True if the server is HexenWorld (use with $IF)
+$UNREAL		True if the server is Unreal (use with $IF)
+
+Player template variables
+$DEATHS		Number of deaths (Unreal only)
+$TEAMNUM	Team number (Unreal only)
+
+un-Unreal support
+-----------------
+I implemented support for the original Unreal server status protocol.
+However, the Unreal server worked so poorly as to be unusable.  Unreal
+is getting improved Internet support, but it's not ready yet.  When
+Unreal gets fixed, QStat will support the new protocol.
+
+
+I've also included the templates I use for the status page of my
+own Quake II servers.
+
+Steve, steve@activesw.com
+

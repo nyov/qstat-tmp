@@ -1,0 +1,44 @@
+pre {
+	font-family: "Courier New", Courier, mono;
+	font-size: 12px;
+	color: #CCCCCC;
+}
+
+code {
+	font-family: "Courier New", Courier, mono;
+	font-size: 12px;
+	color: #FFCC33;
+}
+
+
+
+body {
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 30px;
+}
+td {
+	font-size: 12px;
+}
+.td-odd {
+	background-color: #4D313B;
+
+}
+.td-even {
+	background-color: #66424F;
+
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}

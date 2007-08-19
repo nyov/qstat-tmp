@@ -1,0 +1,29 @@
+Version 1.6 beta5
+ 
+** UPDATED for 1.6 beta5 **
+Oct 5, 1997
+ 
+Kitchen sink release to add some of the most requested features.
+ 
+- Extended file format.  The file used with the -f option can include
+  server type information to distinguish between Hexen II, Quake, and
+  QuakeWorld servers.  You can put all your servers into one file and
+  query them all with one qstat invocation.
+- Fix bug that caused a QuakeWorld master server query to never timeout.
+- New option -h2s for specifying a single Hexen II server to query.
+- New option -maxsimultaneous limits the number of simultaneous server
+  queries.  Previously configurable by modifying the MAXFD #define in
+  qstat.h.
+- Updated docs [FINALLY!]
+- Compiles on HP-UX 10.20
+- Changed packaging: files are in a directory named for the version
+  of qstat, and use gzip instead of compress on unix
+- Removed pre-QuakeWorld 1.5 support.  The -qw1.5 option is obsolete
+  and no longer needed.  As are the -qwuserinfo and -qwseeninfo options.
+- Smarter about when to include server type prefix in formatted output
+ 
+Unless I hear cries for more features, this will be the last beta
+before the final release of qstat 1.6.  Now that the docs are up to
+date, I've run out of excuses for doing the release.
+ 
+Steve, steve@activesw.com

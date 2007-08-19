@@ -1,0 +1,219 @@
+<html>
+ 
+<head>
+<title>qstat sample output</title>
+
+<link href="css/global.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+</head>
+ 
+<body  bgcolor=#206060 text=#e5e5e5 link=#ccffff vlink=#90e0e0>
+ 
+<h1>Sample output from qstat 1.5</h1>
+
+<p>The file SERVERS used in the samples contains the following text
+</p>
+<p><pre>
+207.50.7.1
+206.160.192.101
+206.150.173.169
+205.217.6.16
+199.67.51.101
+156.46.216.10
+</pre></p>
+
+<hr width=90% size=5>
+
+<p><code>qstat 207.50.7.1 206.160.192.101 206.150.173.169 205.217.6.16 199.67.51.101 156.46.216.10</code>
+
+<pre>
+ADDRESS           PLAYERS      MAP   RESPONSE TIME    NAME
+207.50.7.1         9/16        e2m2    168 / 0        epicenter
+206.160.192.101    8/12        e4m1    124 / 0        Gatsbyhouse2
+206.150.173.169   16/16        e1m5    107 / 0        quaker
+205.217.6.16      10/10        e1m4    123 / 0        Netertainment
+199.67.51.101     16/16        e1m3    243 / 0        Team_Red_V_Blue
+156.46.216.101     8/10        e1m1   1185 / 1        quake101
+</pre>
+</p>
+
+<hr width=90% size=5>
+
+<p><code>qstat -R -f SERVERS
+</code>
+<pre>
+ADDRESS           PLAYERS      MAP   RESPONSE TIME    NAME
+156.46.216.10          DOWN
+206.160.192.101    8/12        e4m1    108 / 0        Gatsbyhouse2
+        noexit=1,timelimit=20,fraglimit=30
+199.67.51.101     16/16        e1m3    216 / 0        Team_Red_V_Blue
+        teamplay=183,timelimit=10
+207.50.7.1        13/16        e2m2    279 / 2        epicenter
+        sv_maxspeed=400,sv_friction=7,teamplay=1
+205.217.6.16       9/10        e1m5    270 / 1        Netertainment
+206.150.173.169   15/16       start    452 / 3        quaker
+</pre>
+
+<hr width=90% size=5>
+
+<p><code>qstat -R -P -f SERVERS
+</code>
+<pre>
+ADDRESS           PLAYERS      MAP   RESPONSE TIME    NAME
+156.46.216.10          DOWN
+206.160.192.101   12/12        e4m3    119 / 0        Gatsbyhouse2
+        noexit=1,timelimit=20,fraglimit=30
+        #0    0 frags  4h56m53s     Peach:Red       arcas
+        #1   16 frags    12m52s     Green:Brown     Baur Power]
+        #2   26 frags    16m 0s     Brown:Brown     crash
+        #3   26 frags  1h45m47s      Blue:Blue      orion
+        #4   28 frags    13m36s      Blue:Blue      tre_dog
+        #5   14 frags    12m14s       Red:Blue      Wags
+        #6   25 frags    33m41s     Khaki:Brown     nash
+        #7   26 frags    35m49s     Khaki:Tan       DeRanger
+        #8    7 frags    26m54s     Brown:Brown     newbie boy]
+        #9    0 frags     1m36s       Red:Red       superman
+        #10   0 frags    18m27s  Lt Peach:Blue      maniac 5
+        #11   2 frags     9m47s       Red:White     rihoke
+207.50.7.1         7/16        e2m2    368 / 0        epicenter
+        sv_maxspeed=400,sv_friction=7,teamplay=1
+        #0   56 frags  1h 9m19s       Red:Red       Mumford
+        #1   15 frags  1h 8m46s  Lavender:Lavender  squiggle
+        #2   11 frags  3h48m58s       Red:Khaki     bruno
+        #3   41 frags    23m52s       Red:Red       Act-Steve
+        #4   99 frags  2h22m26s  Lavender:Lavender  QSnowDogQ
+        #5   12 frags    11m32s Dk Purple:Peach     Missledick
+        #6   33 frags    28m33s      Blue:Blue      darthkarl
+206.150.173.169   15/16        e1m6    297 / 4        quaker
+        #0    8 frags    52m38s     Brown:Brown     lion
+        #1    8 frags  1h31m 0s      Blue:Red       kill me, I suck
+        #2    0 frags       13s       Red:Red       nighthawk
+        #3    5 frags    13m 3s     White:White     player
+        #4    7 frags  2h23m41s    Yellow:Yellow    CH-Horror
+        #5   11 frags    42m14s     Peach:Blue      peacemaker
+        #6    4 frags     4m26s       Red:Red       unconnected
+        #7    6 frags  1h45m13s      Blue:Blue      travis
+        #8    0 frags       16s Dk Purple:Dk Purple gearhead
+        #9    0 frags        9s     Brown:Red       SC
+        #10  14 frags    14m 3s     White:White     Whacker
+        #11   6 frags    45m18s  Lt Peach:Tan       nene
+        #12   0 frags    33m 3s Dk Purple:Lt Peach  unconnected
+        #13   2 frags    30m33s  Lt Peach:Khaki     streaker
+        #14   4 frags    12m20s  Lt Brown:Brown     mustang
+205.217.6.16      10/10        e1m6    350 / 4        Netertainment
+        #0   -1 frags     6m59s  Lavender:Lavender  Wizkid
+        #1   32 frags    31m37s  Lavender:Lavender  Kanan
+        #2   10 frags    21m12s       Red:Red       zwierdo
+        #4   52 frags    29m38s     White:Lt Peach  ZYMURGY
+        #5   16 frags  1h29m59s Dk Purple:Dk Purple Buffy
+        #6    3 frags     2m43s     Brown:Brown     Spiro
+        #7   35 frags    19m32s      Blue:Blue      borgmeister
+        #8   53 frags    18m41s       Red:White     ZARDOZ
+        #9    0 frags       46s     White:White     unconnected
+199.67.51.101     14/16        e1m7    576 / 3        Team_Red_V_Blue
+        teamplay=183,timelimit=10
+        #0   -2 frags  1h40m59s       Red:Red       siron
+        #1    3 frags     1m 6s       Red:Red       JoeBlow
+        #2   10 frags     9m27s      Blue:Blue      PTD
+        #3    1 frags    59m52s       Red:Red       DaGimp
+        #4    2 frags     6m29s       Red:Red       maggot factory
+        #5   22 frags  2h 7m19s     Peach:Red       goldfinger
+        #6    6 frags  1h25m52s      Blue:Blue      J-Man
+        #7    5 frags    36m 2s      Blue:Blue      Cornell
+        #8    5 frags    36m 3s      Blue:Blue      Cornell
+        #9   11 frags  1h20m54s       Red:Red       smellycat
+        #10   2 frags     2m 2s       Red:Red       zw.reklaw
+        #11   4 frags    14m 6s      Blue:Blue      alf
+        #12   1 frags    35m45s      Blue:Red       K~S1 RYAN
+        #13  -3 frags    16m 4s      Blue:Blue      Uncle_Enzo
+</pre>
+
+<hr width=90% size=5>
+
+<p><code>qstat -raw __ -R -P -f SERVERS
+</code>
+<pre>
+156.46.216.10__DOWN
+ 
+206.160.192.101__Gatsbyhouse2__206.160.192.101:26000__3__e4m5__12__12__149__0
+sv_maxspeed=320__sv_friction=4__sv_gravity=800__noexit=1__teamplay=0__timelimit=20__fraglimit=30
+0__arcas__128.198.64.39:1229__0__19699__6__4
+1__Baur Power]__128.174.202.123:1041__9__2659__11__1
+2__crash__165.91.8.150:1070__16__2847__1__1
+3__orion__204.189.36.12:1039__10__8234__13__13
+4__tre_dog__128.143.247.7:1041__8__2703__13__13
+5__Zone__206.61.61.60:1113__0__229__4__13
+6__Alpha-6-q-Oat__204.214.110.120:1057__1__69__4__3
+7__DeRanger__129.72.235.239:1033__18__4036__3__10
+8__immortal__205.139.231.204:1030__16__1627__13__13
+9__firefox__129.15.129.131:1112__4__619__4__4
+10__maniac 5__195.232.5.93:1191__3__2994__7__13
+11__Captain_Ron__128.83.249.49:2192__10__1465__6__13
+ 
+207.50.7.1__epicenter__207.50.7.1:26000__3__e2m7__16__11__296__0
+sv_maxspeed=400__sv_friction=7__sv_gravity=800__noexit=0__teamplay=1__timelimit=0__fraglimit=0
+0__Mumford__204.247.161.54:1254__8__6046__4__4
+1__squiggle__128.83.254.149:1064__-1__6013__2__2
+2__b__205.241.121.23:1136__0__15625__4__3
+3__bonk__129.219.9.54:1028__3__510__2__1
+4__QSnowDogQ__205.241.121.18:1033__8__10432__2__2
+5__tex__206.66.14.137:1037__0__1371__12__12
+6__Missledick__205.186.168.140:2147__2__2579__4__6
+7__bolivar-NC__208.134.144.162:1029__0__1083__0__0
+8__proteus__208.129.70.198:2863__1__114__4__4
+9__nb_rambo__205.229.106.47:1123__2__364__11__9
+10__Death_child__129.219.9.36:1027__9__571__2__1
+
+199.67.51.101__Team_Red_V_Blue__199.67.51.101:26000__3__e1m7__16__16__292__4
+sv_maxspeed=320__sv_friction=4__sv_gravity=800__noexit=0__teamplay=183__timelimit=10__fraglimit=0
+0__siron__205.167.126.31:1088__7__6272__4__4
+1__jph__205.160.203.44:1094__1__209__4__13
+2__JoeBlow__204.118.6.244:1187__5__279__4__4
+3__PTD__128.143.236.124:2459__11__781__13__13
+4__DaGimp__204.157.102.39:1063__1__3806__4__4
+5__maggot factory__156.46.97.125:1157__0__603__4__4
+6__goldfinger__153.104.201.245:1075__31__7853__6__4
+7__J-Man__198.180.49.7:1419__17__5365__13__13
+9__smellycat__205.177.221.50:1030__12__5066__4__4
+10__zw.reklaw__204.17.220.106:1229__6__332__4__4
+11__alf__206.161.187.41:1049__9__1057__13__13
+12__K~S1 RYAN__207.76.141.52:1029__-1__2354__13__4
+13__nk-urnso__199.69.228.103:1196__-1__87__13__13
+14__kris__204.50.31.75:1554__1__593__13__13
+15__Piglet__199.37.134.75:1037__0__179__13__13
+ 
+205.217.6.16__Netertainment__205.217.6.16:26000__3__e1m6__10__10__503__7
+sv_maxspeed=320__sv_friction=4__sv_gravity=800__noexit=0__teamplay=0__timelimit=0__fraglimit=0
+0__Wizkid__206.173.226.23:1030__0__633__2__2
+1__Kanan__199.3.123.85:1148__37__2109__2__2
+2__zwierdo__205.217.6.181:1321__9__1485__4__4
+3__green clanger]__158.152.129.83:1197__13__2820__3__3
+4__ZYMURGY__138.87.201.44:1249__62__1991__0__7
+5__Buffy__206.154.10.35:1027__16__5611__9__9
+6__player__198.69.214.214:1622__0__208__0__0
+7__borgmeister__204.253.37.2:2234__43__1387__13__13
+8__ZARDOZ__198.109.161.232:1866__59__1336__4__0
+9__CD-ROMER__206.102.228.34:1578__0__32__3__5
+ 
+206.150.173.169__quaker__206.150.173.169:26000__3__e1m1__16__14__430__7
+sv_maxspeed=320__sv_friction=4__sv_gravity=800__noexit=0__teamplay=0__timelimit=0__fraglimit=0
+0__lion__128.118.27.106:1143__0__3372__1__1
+1__kill me, I suck__129.82.192.9:1032__1__5674__13__4
+2__unconnected__153.34.144.73:1033__0__13__0__0
+3__player__204.246.5.177:1027__0__996__0__0
+4__peacemaker__207.6.189.63:1028__3__2747__6__13
+5__travis__205.139.62.238:1072__0__6526__13__13
+6__5Quake__38.14.75.112:1076__2__130__13__13
+7__player__131.215.84.35:1354__0__1056__0__0
+8__nene__129.2.160.41:2160__1__2932__7__10
+9__unconnected__204.120.17.204:1065__0__2196__9__7
+10__streaker__206.80.9.108:1067__0__2047__7__3
+11__mustang__205.172.60.163:1204__1__954__5__1
+12__Apocalypse__147.226.140.103:1031__1__204__10__8
+</pre>
+
+</body>
+ 
+ 
+</html>
+

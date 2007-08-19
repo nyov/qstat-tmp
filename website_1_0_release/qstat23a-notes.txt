@@ -1,0 +1,58 @@
+QStat version 2.3a BETA
+April 19, 1999
+
+Lots of changes and additions in this release, far more than I have
+patience to test.  Please try this release with your web page, stats
+program, server browser, and what not.  If you encounter any problems
+_please_ send me email!  Flames on my sloppy coding are acceptable.
+
+Summary of New Features
+-----------------------
+Complete Half-Life support (players and server rules)
+Half-Life master server		(option -hlm)
+Tribes servers			(option -tbs)
+Tribes master server		(option -tbm)
+Shogo				(option -sgs)
+Hex player colors		(option -hc)
+Several new template variables
+Created server types table to simplify code
+
+Bug Fixes
+---------
+Servers without "hostname" rule appeared to TIMEOUT
+One or two other boo-boos
+
+Incompatible
+------------
+The option "-qw" has been removed.  Please use "-qwm" instead.
+
+New variables for output templates
+----------------------------------
+Generic variables
+$(DEFAULTTYPE)	Full name of the default server type (-default)
+Server variables
+$(ISEMPTY)	True if the server has no players
+$(ISFULL)	True if the server is full of players
+Player variables
+$(PACKETLOSS)	Players packets loss (Tribes only)
+$(ISTEAM)	True if this player represents a team (Tribes only)
+$(TEAMNAME)	Name of this player's team (Tribes only)
+
+Notes
+-----
+Many thanks to the following for their assistance:
+zarjazz@barrysworld.com			Tribes
+seb@club-internet.fr, carl@d-n-a.net	Shogo
+sean@msiconsulting.com			Half-Life
+
+Thanks to the many people who have sent suggestions for improvements.
+I've incorporated some of them in this release, more will follow in
+later releases.
+
+This release was focused on supporting popular new games and making
+it easier to add new games to the code.  The backlog of new games
+support is now empty.  If there's a game you would like to see
+supported, please send email.  The Linux game BFRIS
+(http://www.aegistech.com) is the only planned new game support.
+
+Steve, steve@activesw.com

@@ -1,0 +1,50 @@
+QStat version 2.3e BETA
+Jan 7, 2000
+
+Lots of fixes for master servers, Unreal, misc.
+
+Download from:
+
+http://www.activesw.com/people/steve/qstatdl.html
+
+
+Summary of Fixes
+----------------
+Quake III Arena master queries
+Half-Life master queries
+$(IF:GAME) was true when $GAME was blank (Tribes)
+Improved Q3A player name translation
+Fixed raw mode output for Unreal (minor incompatible change)
+Updated docs for raw mode output
+Add one to Unreal/UT port to get query port (incompatible change)
+$GAME and "-sort g" now work for Unreal/UT
+
+Summary of New Features
+-----------------------
+Options added for Kingpin and Heretic II game servers.  These
+two games were previously supported with the -q2s option.
+
+New options: -kps and -hrs
+New template conditions: $(IF:KINGPIN) and $(IF:HERETIC2)
+
+Notes
+-----
+Numerous people sent me the fix for the Q3A master query problem.  I
+think the first was Ted Milker, but thanks to all for your suggestions
+and patience.
+
+The Half-Life master support wasn't using the latest protocol, so
+needed an upgrade.  Now you can get the full 2100+ server list from
+the master.  BTW, there are more HL servers than Q3A servers.
+
+Unreal support was changed to automatically add one to the port number
+to find the query port.  This is probably why people thought QStat
+didn't support UT.  For those that figure it out already, you'll have
+to remove your own +1 hacks to use this release.
+
+I apologize for the long delay between releases.  Work, holidays, and
+health problems cut my free time to less than zero.
+
+Best wishes for the new millennium,
+
+Steve

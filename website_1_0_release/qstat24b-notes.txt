@@ -1,0 +1,40 @@
+QStat version 2.4b
+Apr 13, 2001
+
+This release can be downloaded from
+
+        http://www.qstat.org
+
+Summary of New Features
+-----------------------
+Support for Tribes 2 [-t2s] (builds numbered 22075 or higher)
+Support for Tribes 2 master [-t2m]
+Support for Quake 3 and Tribes 2 colorized player names [-htmlnames]
+Sample HTML templates for Tribes 2 [template/tribes2*]
+New QStat web site!   http://www.qstat.org
+New mailing lists for QStat users and announcements! (see web site)
+
+New template variables
+----------------------
+$ISMASTER
+$TRIBES2
+$TRIBES2MASTER
+$HTMLPLAYERNAME
+
+Bug Fixes
+---------
+Fix 'game' value for some Quake 2 based servers
+Fixed some cases where QStat will hang
+Fixed some picky compiler warnings
+
+Notes
+-----
+The Tribes 2 master server has a number of fancy filtering options.
+Check the "Tribes 2 Master" section in the documentation for details.
+
+Many thanks to Brad Heinz and Dynamix for their help with Tribes 2.
+Thanks to the QStat beta testers:
+	Dr. Chmod, Marauder, Leif Sawyer, Luca Spada, Simon Garner,
+	and Jose Ivey
+
+Steve, steve@qstat.org
