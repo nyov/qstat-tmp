@@ -3,31 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Untitled Document</title>
-<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="/css/global.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 <div id="container">
 <div class="leftblock">
-  <p><img src="images/logo1.png" alt="QSTAT" width="120" height="135" class="qstatlogo" />
-  <a href="#" class="latestdownload">DOWNLOAD QSTAT 2.10</a>
-  <ul id="nav1">
-    <li><a href="123">Release Notes v2.6</a></li>
-    <li><a href="#">Documentation v2.6</a></li>
-	<li class="spacer"></li>
-    <li><a href="#">Mailing Lists</a> </li>
-	<li class="spacer"></li>
-    <li><a href="#">Information</a></li>
-    <li><a href="#">FAQ</a></li>
-    <li><a href="#">Server Pages</a></li>
-    <li><a href="#">CGI Scripts</a></li>
-    <li><a href="#">Derived Works</a></li>
-    <li><a href="#">Network Protocol</a></li>
-	<li class="spacer"></li>
-    <li><a href="#">Contact Steve</a></li>
-  </ul>
-  <p><br />
-  </p>
+<!--#include virtual="/inc/nav.html" -->
 </div>
 <div class="rightblock">
   <h1 align="right">QStat Mailing Lists</h1>
