@@ -29,7 +29,7 @@ terminate lines.</p>
 - Bug Fixes<br />
 - ETQW support</p>
 <p>You can <a href="http://qstat.svn.sourceforge.net/viewvc/qstat/trunk/qstat2/">browse the latest source</a> to view change comments. Or If you wish to download and compile the latest SVN trunk, then you may do so anonymously via the following checkout command:</p>
-<pre>https://qstat.svn.sourceforge.net/svnroot/qstat/trunk/qstat2 qstat2</pre>
+<pre>svn checkout https://qstat.svn.sourceforge.net/svnroot/qstat/trunk/qstat2 qstat2</pre>
 </div>
 
 <div class="clear"></div>
